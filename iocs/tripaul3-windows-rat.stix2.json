@@ -1,0 +1,627 @@
+{
+  "type": "bundle",
+  "id": "bundle--a2400ccb-cb38-50b9-bda8-9f698d8eb29f",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-27T00:00:00.000Z",
+      "modified": "2026-10-27T00:00:00.000Z",
+      "name": "Mihari Threat Research",
+      "identity_class": "organization",
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3b5f7ab1-15c4-502c-8b65-55ede0083d83",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: sha256",
+      "description": "Nucleo TRIPAUL3 (tripaul.exe)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'fd57bbf23d51bb7d2869ec6f72d39eb809995f27ce5b9bc1141d7cc6f81d83f4']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d057b59f-f5f6-5a42-8fb7-1ed38273628a",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: md5",
+      "description": "Nucleo TRIPAUL3 (tripaul.exe)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'MD5' = '5b8699306f031db256aa6eb2dd4c15f7']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6441d4d5-8973-57c6-96aa-53e0d51164d6",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: imphash",
+      "description": "Imphash del nucleo",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:x_imphash = '9a5858b29cb5d7c41c10e4b098209c42']",
+      "pattern_type": "stix",
+      "confidence": 60,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--538d1820-44d1-596a-a013-045626ec4367",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: sha256",
+      "description": "Plugin keylogger (descifrado del overlay)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'c462094f36c6b62d68e66596d2825b862dd28cd2754acabfa40729101af72e17']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4e675c8c-6578-51e5-8d75-476716de94ca",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: md5",
+      "description": "Plugin keylogger",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'MD5' = 'ef8ffee05fec5f6451a2e13308724634']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b2fb9daf-6682-50ed-861a-d32d978f13e2",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: sha256",
+      "description": "Plugin shell_sysinfo",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '02b26e03fb5234de587726500ce1937e3293415a5aaf7cfd7f3b994f5a4ee308']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4fed33da-3478-532a-8132-7c906d2f00b6",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: md5",
+      "description": "Plugin shell_sysinfo",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'MD5' = '340009759c2b568b3f6428082658f35f']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--30ebdd63-da54-5559-ac9c-22194f10e7e9",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: sha256",
+      "description": "Plugin filemgr",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '18810be7375495d0ac5b5b2b1853d5524e62cd88e869ce5e6c8bf63a6d693ab2']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e9c02213-2be5-540d-9e2f-393ceb175ca4",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: md5",
+      "description": "Plugin filemgr",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'MD5' = '1807a2b8c9db3339878bd2bff1a66cec']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f2e777b8-f111-5509-9fd8-0d9c37af8567",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: sha256",
+      "description": "Plugin vnc",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '303e23ff1720a18e6f52428725aece77db54e0cf52f1c0f3f31e4793f97148e4']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1486b30e-459d-5647-998c-20ab561c04c5",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: md5",
+      "description": "Plugin vnc",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'MD5' = '8692c09c704b6e22ae7e14815ee0f168']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2dba44cf-8465-50aa-a548-9abe3077039a",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: sha256",
+      "description": "Plugin hvnc",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '0734f6ce605e637bce26d96f4f4945d300a72ffd56d1934da1d39f81553eec66']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3381b753-f72d-5684-8ab3-18c9edb952c1",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: md5",
+      "description": "Plugin hvnc",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'MD5' = '091671ee50d95b9be7dc9ba039bbc867']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fe37d635-9fb7-5860-9e3c-4ad2fba0cd9b",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: sha256",
+      "description": "Plugin stealer",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '5d961c03f17cbd46b8f0a80648bac6ada6d0a45bb91ff5633ec5112628964984']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--26025f16-fa45-53cf-8dcc-5728ac20c392",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: md5",
+      "description": "Plugin stealer",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'MD5' = '74dd60198452d60ef47df277d4df0136']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c6b4ed47-1c35-59cc-9b3e-52f70483ea99",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: ip:port",
+      "description": "C2 primario extraido del overlay (HTTP plano sin TLS)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[network-traffic:dst_ref.type = 'ipv4-addr' AND network-traffic:dst_ref.value = '31.56.19.150' AND network-traffic:dst_port = 8443]",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--07c47ef4-9c0f-5570-81f4-6c34b66d0b9a",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: url",
+      "description": "Registro del bot",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'http://31.56.19.150:8443/bot/register']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3d123163-23e6-5cf2-8183-42618a497c7b",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: registry",
+      "description": "Persistencia: Run key",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[windows-registry-key:key = 'HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run' AND windows-registry-key:values[*].name = 'WindowsSecurity']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--47da9c86-035f-5e0d-8eca-a2a9f007b3d6",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: file_path",
+      "description": "Persistencia: acceso directo en Startup",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:name = 'WindowsSecurity.lnk']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9d01d0f8-dcf9-586e-b079-c3409e237eef",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: file_path",
+      "description": "Binario de auto-actualizacion descargado con certutil",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:name = 't3upd.exe']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c894263f-2139-5e2d-8483-e83b7cf2e2f0",
+      "created_by_ref": "identity--e981ab8a-df7a-5b27-8842-38f8503abb3f",
+      "created": "2026-10-20T00:00:00.000Z",
+      "modified": "2026-10-20T00:00:00.000Z",
+      "valid_from": "2026-10-20T00:00:00.000Z",
+      "name": "tripaul3-windows-rat: file_path",
+      "description": "Script de auto-borrado del comando uninstall",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:name = 't3del.bat']",
+      "pattern_type": "stix",
+      "confidence": 85,
+      "labels": [
+        "tripaul3-windows-rat"
+      ],
+      "external_references": [
+        {
+          "source_name": "Mihari Intelligence Blog",
+          "url": "https://mihari-intelligence.blogspot.com/"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

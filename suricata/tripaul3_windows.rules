@@ -1,0 +1,14 @@
+# Mihari Threat Research - TRIPAUL3 Windows RAT (TLP:CLEAR) - 2026-10-17
+# Ref: https://mihari-intelligence.blogspot.com/2026/10/tripaul3-anatomia-rat-modular-windows.html
+# SID 1000010-1000013 (bloque TRIPAUL3: 1000010-1000099)
+#
+# El C2 usa HTTP plano en el puerto 8443. Suricata detecta HTTP por app-layer en cualquier
+# puerto; verifica que la deteccion de protocolo no este limitada a puertos en suricata.yaml.
+
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"MIHARI TRIPAUL3 - bot registration"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/bot/register"; http.header; content:"X-Bot-ID|3a|"; nocase; reference:url,mihari-intelligence.blogspot.com/2026/10/tripaul3-anatomia-rat-modular-windows.html; classtype:trojan-activity; sid:1000010; rev:2; metadata:author Mihari_Threat_Research, created_at 2026_10_17, updated_at 2026_10_27;)
+
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"MIHARI TRIPAUL3 - bot poll"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/bot/poll?bot_id="; http.header; content:"X-Bot-ID|3a|"; nocase; reference:url,mihari-intelligence.blogspot.com/2026/10/tripaul3-anatomia-rat-modular-windows.html; classtype:trojan-activity; sid:1000011; rev:2; metadata:author Mihari_Threat_Research, created_at 2026_10_17, updated_at 2026_10_27;)
+
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"MIHARI TRIPAUL3 - plugin download"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/plugin/get?name="; reference:url,mihari-intelligence.blogspot.com/2026/10/tripaul3-anatomia-rat-modular-windows.html; classtype:trojan-activity; sid:1000012; rev:2; metadata:author Mihari_Threat_Research, created_at 2026_10_17, updated_at 2026_10_27;)
+
+alert ip $HOME_NET any -> 31.56.19.150 8443 (msg:"MIHARI TRIPAUL3 - conexion al C2 conocido 31.56.19.150:8443"; flow:to_server; classtype:trojan-activity; sid:1000013; rev:1; metadata:author Mihari_Threat_Research, created_at 2026_10_27, confidence High;)

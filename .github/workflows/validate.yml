@@ -1,0 +1,48 @@
+name: Validar reglas e IOCs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          pip install yara-python sigma-cli
+          sudo add-apt-repository -y ppa:oisf/suricata-stable
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq suricata
+
+      - name: Compilar reglas YARA
+        run: |
+          python - <<'EOF'
+          import glob, sys, yara
+          files = sorted(glob.glob("yara/*.yar"))
+          for f in files:
+              yara.compile(filepath=f)
+              print("OK", f)
+          print(f"{len(files)} ficheros YARA compilados")
+          EOF
+
+      - name: Validar reglas Sigma
+        run: sigma check sigma/
+
+      - name: Validar reglas Suricata
+        run: |
+          cat suricata/*.rules > /tmp/mihari.rules
+          sudo suricata -T -S /tmp/mihari.rules -l /tmp
+
+      - name: SIDs de Suricata unicos
+        run: |
+          dups=$(grep -ho 'sid:[0-9]*' suricata/*.rules | sort | uniq -d)
+          if [ -n "$dups" ]; then echo "SID duplicados: $dups"; exit 1; fi
+

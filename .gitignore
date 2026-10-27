@@ -1,0 +1,17 @@
+# Nunca subir muestras ni artefactos descifrados
+*.exe
+*.dll
+*.dll.bin
+*.apk
+*.dex
+*.bin
+*.zip
+*.7z
+samples/
+out/
+plugins_out/
+
+# Python
+__pycache__/
+*.pyc
+.venv/

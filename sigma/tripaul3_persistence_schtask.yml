@@ -1,0 +1,24 @@
+title: TRIPAUL3 Persistence - Scheduled Task WindowsSecurity
+id: b1254a25-ce76-4c46-8026-aaf5f55ef923
+status: experimental
+description: Detecta el registro de la tarea programada "WindowsSecurity" (evento 4698) creada por la persistencia de TRIPAUL3.
+references:
+    - https://mihari-intelligence.blogspot.com/2026/10/tripaul3-anatomia-rat-modular-windows.html
+author: Mihari Threat Research
+date: 2026-10-17
+modified: 2026-10-27
+tags:
+    - attack.persistence
+    - attack.t1053.005
+logsource:
+    product: windows
+    service: security
+    definition: Requiere la auditoria "Other Object Access Events" para generar el evento 4698
+detection:
+    selection:
+        EventID: 4698
+        TaskName|endswith: '\WindowsSecurity'
+    condition: selection
+falsepositives:
+    - Improbable
+level: high

@@ -1,0 +1,25 @@
+title: TRIPAUL3 Update Chain - certutil descarga t3upd.exe
+id: be057f58-b833-4a87-82b1-96c740cabe13
+status: experimental
+description: Detecta el comando update de TRIPAUL3, que descarga el nuevo binario con certutil -urlcache como t3upd.exe.
+references:
+    - https://mihari-intelligence.blogspot.com/2026/10/tripaul3-anatomia-rat-modular-windows.html
+author: Mihari Threat Research
+date: 2026-10-17
+modified: 2026-10-27
+tags:
+    - attack.command-and-control
+    - attack.t1105
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\certutil.exe'
+        CommandLine|contains|all:
+            - '-urlcache'
+            - 't3upd.exe'
+    condition: selection
+falsepositives:
+    - Improbable
+level: high

@@ -1,0 +1,22 @@
+title: TRIPAUL3 Persistence - Run Key WindowsSecurity
+id: 638b0368-1128-4b60-b9ad-56ae1be5c8be
+status: experimental
+description: Detecta la creacion del valor Run "WindowsSecurity" usado por la persistencia del RAT TRIPAUL3.
+references:
+    - https://mihari-intelligence.blogspot.com/2026/10/tripaul3-anatomia-rat-modular-windows.html
+author: Mihari Threat Research
+date: 2026-10-17
+modified: 2026-10-27
+tags:
+    - attack.persistence
+    - attack.t1547.001
+logsource:
+    category: registry_set
+    product: windows
+detection:
+    selection:
+        TargetObject|endswith: '\Software\Microsoft\Windows\CurrentVersion\Run\WindowsSecurity'
+    condition: selection
+falsepositives:
+    - Software legitimo que registre un valor Run con ese nombre exacto (no conocido)
+level: high

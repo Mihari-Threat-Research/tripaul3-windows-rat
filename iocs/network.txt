@@ -1,0 +1,10 @@
+# TRIPAUL3 Windows - Mihari Threat Research - TLP:CLEAR
+# tipo<TAB>valor (sin defang)
+ip:port	31.56.19.150:8443
+url	http://31.56.19.150:8443/bot/register
+http_path	/bot/register
+http_path	/bot/poll?bot_id=
+http_path	/bot/result
+http_path	/plugin/get?name=
+http_path	/bot/vnc_frame
+http_path	/bot/stealer_log

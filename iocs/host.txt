@@ -1,0 +1,9 @@
+# TRIPAUL3 Windows - Mihari Threat Research - TLP:CLEAR
+# tipo<TAB>valor (sin defang)
+string	X-Bot-ID:
+string	TRIPAUL3
+registry	HKCU\Software\Microsoft\Windows\CurrentVersion\Run\WindowsSecurity
+scheduled_task	WindowsSecurity
+file_path	%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\WindowsSecurity.lnk
+file_path	%TEMP%\t3upd.exe
+file_path	%TEMP%\t3del.bat

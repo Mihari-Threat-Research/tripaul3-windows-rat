@@ -1,0 +1,31 @@
+type,value,context,confidence,first_seen
+sha256,FD57BBF23D51BB7D2869EC6F72D39EB809995F27CE5B9BC1141D7CC6F81D83F4,Nucleo TRIPAUL3 (tripaul.exe),high,2026-10-20
+md5,5B8699306F031DB256AA6EB2DD4C15F7,Nucleo TRIPAUL3 (tripaul.exe),high,2026-10-20
+imphash,9A5858B29CB5D7C41C10E4B098209C42,Imphash del nucleo,medium,2026-10-20
+sha256,C462094F36C6B62D68E66596D2825B862DD28CD2754ACABFA40729101AF72E17,Plugin keylogger (descifrado del overlay),high,2026-10-20
+md5,EF8FFEE05FEC5F6451A2E13308724634,Plugin keylogger,high,2026-10-20
+sha256,02B26E03FB5234DE587726500CE1937E3293415A5AAF7CFD7F3B994F5A4EE308,Plugin shell_sysinfo,high,2026-10-20
+md5,340009759C2B568B3F6428082658F35F,Plugin shell_sysinfo,high,2026-10-20
+sha256,18810BE7375495D0AC5B5B2B1853D5524E62CD88E869CE5E6C8BF63A6D693AB2,Plugin filemgr,high,2026-10-20
+md5,1807A2B8C9DB3339878BD2BFF1A66CEC,Plugin filemgr,high,2026-10-20
+sha256,303E23FF1720A18E6F52428725AECE77DB54E0CF52F1C0F3F31E4793F97148E4,Plugin vnc,high,2026-10-20
+md5,8692C09C704B6E22AE7E14815EE0F168,Plugin vnc,high,2026-10-20
+sha256,0734F6CE605E637BCE26D96F4F4945D300A72FFD56D1934DA1D39F81553EEC66,Plugin hvnc,high,2026-10-20
+md5,091671EE50D95B9BE7DC9BA039BBC867,Plugin hvnc,high,2026-10-20
+sha256,5D961C03F17CBD46B8F0A80648BAC6ADA6D0A45BB91FF5633EC5112628964984,Plugin stealer,high,2026-10-20
+md5,74DD60198452D60EF47DF277D4DF0136,Plugin stealer,high,2026-10-20
+ip:port,31.56.19.150:8443,C2 primario extraido del overlay (HTTP plano sin TLS),high,2026-10-20
+url,http://31.56.19.150:8443/bot/register,Registro del bot,high,2026-10-20
+http_path,/bot/register,Endpoint C2 de registro (POST),medium,2026-10-20
+http_path,/bot/poll?bot_id=,Endpoint C2 de polling cada 30 s (GET),medium,2026-10-20
+http_path,/bot/result,Endpoint C2 de resultados (POST),medium,2026-10-20
+http_path,/plugin/get?name=,Descarga de plugins desde el C2,medium,2026-10-20
+http_path,/bot/vnc_frame,Endpoint interno de frames VNC,medium,2026-10-20
+http_path,/bot/stealer_log,Endpoint interno del stealer,medium,2026-10-20
+string,X-Bot-ID:,Cabecera HTTP distintiva del C2,medium,2026-10-20
+string,TRIPAUL3,Marcador del overlay cifrado (ultima aparicion),high,2026-10-20
+registry,HKCU\Software\Microsoft\Windows\CurrentVersion\Run\WindowsSecurity,Persistencia: Run key,high,2026-10-20
+scheduled_task,WindowsSecurity,Persistencia: tarea programada ONLOGON,medium,2026-10-20
+file_path,%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\WindowsSecurity.lnk,Persistencia: acceso directo en Startup,high,2026-10-20
+file_path,%TEMP%\t3upd.exe,Binario de auto-actualizacion descargado con certutil,high,2026-10-20
+file_path,%TEMP%\t3del.bat,Script de auto-borrado del comando uninstall,high,2026-10-20
