@@ -46,9 +46,7 @@ El fallo de diseño es de base: la clave AES viaja en claro en la cabecera del o
 - **Suricata:** reglas en una sola línea, con `reference` y `metadata`, más una regla nueva (SID 1000013) para la IP:puerto del C2.
 - **Extractor:** unifica los dos scripts del blog (que perdió la indentación al publicarse) en uno con dependencia única (`cryptography`); guarda los plugins con extensión `.dll.bin` para evitar ejecuciones accidentales.
 
-### Pendiente en el blog
 
-La fila **Estado en VirusTotal** de la sección 2 sigue mostrando `[COMPLETAR]`.
 
 ## Verificación dinámica
 
